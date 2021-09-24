@@ -1,0 +1,24 @@
+@startuml ISP
+  package ISP {
+    package interface {
+      interface IRectangle {
+        String drawRectangle()
+      }
+
+      interface ICircle {
+        String drawCircle()
+      }
+    }
+
+    class Circle {
+      String drawCircle()
+    }
+
+    class Rectangle{
+      String drawRectangle()
+    }
+
+    ICircle <-- Circle
+    IRectangle <-- Rectangle
+  }
+@enduml
