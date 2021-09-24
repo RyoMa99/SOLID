@@ -1,0 +1,27 @@
+@startuml SRP
+
+package SRP {
+  package ValueObject {
+    class RegularPrice {
+      + int amount
+      + void RegularPrice(int amount)
+      + RegularPrice add(RegularPrice price)
+    }
+  }
+
+  class RegularDiscountedPrice {
+    + RegularPrice amount
+    + RegularDiscountedPrice(RegularPrice amount)
+  }
+
+  class SummerDiscountedPrice {
+    + RegularPrice amount
+    + SummerDiscountedPrice(RegularPrice amount)
+  }
+
+  RegularPrice <.. RegularDiscountedPrice
+  RegularPrice <.. SummerDiscountedPrice
+}
+
+
+@enduml
