@@ -1,0 +1,26 @@
+@startuml OCP 
+package OCP {
+  package interface {
+    interface Animal {
+      + String makeSound()
+    }
+  }
+
+  class Lion {
+    + String makeSound()
+  }
+
+  class Snake {
+    + String makeSound()
+  }
+
+  class Animals {
+    {static} void animalsSounds(Animal a[])
+  }
+
+  Animal <-- Lion
+  Animal <-- Snake
+  Animal <..left Animals
+}
+
+@enduml
