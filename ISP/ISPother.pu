@@ -18,7 +18,7 @@
       String drawRectangle()
     }
 
-    ICircle <-- Circle
-    IRectangle <-- Rectangle
+    ICircle <|.. Circle
+    IRectangle <|.. Rectangle
   }
 @enduml

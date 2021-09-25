@@ -14,7 +14,7 @@
       String draw()
     }
 
-    IShape <-- Circle
-    IShape <-- Rectangle
+    IShape <|.. Circle
+    IShape <|.. Rectangle
   }
 @enduml

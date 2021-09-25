@@ -25,9 +25,9 @@ package Service {
   }
 }
 
-UserController -right-> IUserService
-IUserService <.. UserService
-UserService -right-> IUserRepository
-IUserRepository <.. UserRepository
+UserController .right.> IUserService
+IUserService <|.. UserService
+UserService .right.> IUserRepository
+IUserRepository <|.. UserRepository
 
 @enduml

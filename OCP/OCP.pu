@@ -18,8 +18,8 @@ package OCP {
     {static} void animalsSounds(Animal a[])
   }
 
-  Animal <-- Lion
-  Animal <-- Snake
+  Animal <|.. Lion
+  Animal <|.. Snake
   Animal <..left Animals
 }
 
