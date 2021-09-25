@@ -1,0 +1,33 @@
+@startuml DIP 
+package Controller {
+  class UserController {
+    + String get()
+  }
+
+  interface IUserService {
+    + String Fetch(String userId)
+  }
+}
+
+package Repository {
+  class UserRepository {
+    + String FetchByUserId(String userId)
+  }
+}
+
+package Service {
+  class UserService {
+    + String Fetch(String userId)
+  }
+
+  interface IUserRepository {
+    + String FetchByUserId(String userId)
+  }
+}
+
+UserController -right-> IUserService
+IUserService <.. UserService
+UserService -right-> IUserRepository
+IUserRepository <.. UserRepository
+
+@enduml

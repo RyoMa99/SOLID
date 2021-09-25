@@ -1,3 +1,6 @@
+import DIP.Controller.UserController;
+import DIP.Repository.UserRepository;
+import DIP.Service.UserService;
 import OCP.Animals;
 import OCP.Lion;
 import OCP.Snake;
@@ -18,5 +21,10 @@ class Main{
 
     Animal animals[] = {new Lion(), new Snake()};
     Animals.animalsSounds(animals);
+
+    UserRepository repo = new UserRepository();
+    UserService service = new UserService(repo);
+    UserController controller = new UserController(service);
+    System.out.println(controller.get());
   }
 }
